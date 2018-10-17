@@ -73,11 +73,32 @@ def merge_data(array, data)
 end  
 
 
-def find_cool
-  
-end 
+def find_cool(cool)
+  i = 0
+  output = [];
+  while i < cool.length do
+    cool[i].collect do | key, values |
+      if values == "cool"
+        output << cool[i]
+      return output
+      end
+    end
+    i+=1
+  end
+end
 
-def organize_schools
-  
-end 
+def organize_schools(schools)
+  output = {}
+  schools.each do |key, location_hash|
+    location_hash.each do |k, location|
+      if !output.has_key?(location)
+        output[location] = [key]
+      elsif output.has_key?(location)
+        output[location] << key
+      end
+    end
+  end
+  output
+end
+
   
