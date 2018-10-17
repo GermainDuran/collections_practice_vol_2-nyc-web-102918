@@ -57,6 +57,22 @@ end
  # return c
 #end
 
+def merge_data(array, data)
+  i = 0
+  while i < array.length
+    data.each do |element|
+      element.each do |ka, va|
+        if array[i].has_value?(ka)
+          array[i].merge!(va)
+        end
+      end
+    end
+  i+=1
+  end
+  return array
+end  
+
+
 def find_cool
   
 end 
