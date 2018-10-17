@@ -45,8 +45,16 @@ def remove_non_strings(array)
   }
 end 
 
-def count_elements
-  
+def count_elements(array)
+  i=0 
+  c=0 
+  while (i<array.length){
+    if array[i] != nil 
+      c+=1
+    end
+    i+=1
+  }
+  c
 end
 
 def find_cool
