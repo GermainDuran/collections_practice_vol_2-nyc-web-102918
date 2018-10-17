@@ -39,9 +39,8 @@ def first_wa(hash)
 end
 
 
-def remove_non_strings
-  def remove_non_strings(arr)
-  arr.delete_if {
+def remove_non_strings(array)
+  array.delete_if {
     |element| element.class != String
   }
 end
