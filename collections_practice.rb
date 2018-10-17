@@ -73,13 +73,13 @@ def merge_data(array, data)
 end  
 
 
-def find_cool(cool)
+def find_cool(array)
   i = 0
   output = [];
-  while i < cool.length do
-    cool[i].collect do | key, values |
+  while i < array.length do
+    array[i].collect do | key, values |
       if values == "cool"
-        output << cool[i]
+        output << array[i]
       return output
       end
     end
