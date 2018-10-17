@@ -54,7 +54,7 @@ def count_elements(array)
     end
     i+=1
   }
-  c
+  return c
 end
 
 def find_cool
