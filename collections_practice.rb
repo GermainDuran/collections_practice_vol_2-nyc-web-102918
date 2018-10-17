@@ -40,7 +40,11 @@ end
 
 
 def remove_non_strings
-  
+  def remove_non_strings(arr)
+  arr.delete_if {
+    |element| element.class != String
+  }
+end
 end 
 
 def find_cool
